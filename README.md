@@ -1,7 +1,7 @@
 #AJAX practice folder
 Fetches user infos from github and display them in a template for each user.  
 You can specify different users and get their info.  
-Front end jQuery.  
+Front end implementation.  
 
 Screenshot:  
 
