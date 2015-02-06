@@ -8,7 +8,7 @@ app.set('view engine', 'ejs');
 
 app.get('/', function(req, res){
   res.header("Access-Control-Allow-Origin", "*") 
-  res.sendFile('/index');
+  res.render('index');
 });
 
 server.listen(port, function(){
