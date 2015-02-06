@@ -1,13 +1,14 @@
-var app = require('express')();
+var express = require('express');
+var app = express();
 var server = require('http').createServer(app);
 var port = 4567;
 
-var sleep=require('sleep');
+app.use(express.static(__dirname+'/public'));
+app.set('view engine', 'ejs');
 
 app.get('/', function(req, res){
-  sleep.sleep(2);
   res.header("Access-Control-Allow-Origin", "*") 
-  res.json(new Date);
+  res.sendFile('/index');
 });
 
 server.listen(port, function(){
